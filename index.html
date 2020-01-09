@@ -23,6 +23,14 @@
       <div class="row">
         <div class="s12">
           <h2>I will turn this form into a conversational form</h2>
+          <datalist id="browsers">
+            <option value="Internet Explorer"> </option>
+            <option value="Firefox"> </option>
+            <option value="Chrome"> </option>
+            <option value="Opera mini"> </option>
+            <option value="Safari"> </option>
+          </datalist>
+
           <form action="" cf-form id="form">
             <label for="name">Your name</label>
             <input type="text" placeholder="please enter your name" />
@@ -53,24 +61,31 @@
               value="2"
               name="hobby"
             />
-            <fieldset cf-questions="Do you want to subscribe to our newsletter?">
-              <input type="radio" name="newsletter" cf-label="Yes">
-              <input type="radio" name="newsletter" cf-label="No">
-
+            <fieldset
+              cf-questions="Do you want to subscribe to our newsletter?"
+            >
+              <input type="radio" name="newsletter" cf-label="Yes" />
+              <input type="radio" name="newsletter" cf-label="No" />
             </fieldset>
-            <fieldset cf-questions='Choose your favorite programming languages'>
-              <input type="checkbox" cf-label="JavaScript" name="languages">
-              <input type="checkbox" cf-label="HTML" name="languages">
-              <input type="checkbox" cf-label="CSS" name="languages">
-              <input type="checkbox" cf-label="PHP" name="languages">
-              <input type="checkbox" cf-label="RUBY" name="languages">
-              <input type="checkbox" cf-label="PYTHON" name="languages">
-              <input type="checkbox" cf-label="C++" name="languages">
-              <input type="checkbox" cf-label="C" name="languages">
-              <input type="checkbox" cf-label="JAVA" name="languages">
-              <input type="checkbox" cf-label="GOLANG" name="languages">
-              <input type="checkbox" cf-label="DART" name="languages">
+            <fieldset cf-questions="Choose your favorite programming languages">
+              <input type="checkbox" cf-label="JavaScript" name="languages" />
+              <input type="checkbox" cf-label="HTML" name="languages" />
+              <input type="checkbox" cf-label="CSS" name="languages" />
+              <input type="checkbox" cf-label="PHP" name="languages" />
+              <input type="checkbox" cf-label="RUBY" name="languages" />
+              <input type="checkbox" cf-label="PYTHON" name="languages" />
+              <input type="checkbox" cf-label="C++" name="languages" />
+              <input type="checkbox" cf-label="C" name="languages" />
+              <input type="checkbox" cf-label="JAVA" name="languages" />
+              <input type="checkbox" cf-label="GOLANG" name="languages" />
+              <input type="checkbox" cf-label="DART" name="languages" />
             </fieldset>
+            <input
+              type="text"
+              list="browsers"
+              name="browsers"
+              cf-questions="Select your favorite browser"
+            />
           </form>
           <div id="cf-context"></div>
         </div>
