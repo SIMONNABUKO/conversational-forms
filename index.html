@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Building conversational Forms with HTML, CSS and JavaScript</title>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/space10-community/conversational-form@1.0.1/dist/conversational-form.min.js" crossorigin></script>
-    <!-- <script
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/space10-community/conversational-form@1.0.1/dist/conversational-form.min.js"
+      crossorigin
+    ></script>
+    <script
       type="text/javascript"
       src="conversational-form.js"
       crossorigin
-    ></script> -->
+    ></script>
     <link rel="stylesheet" href="materialize/css/materialize.min.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -28,10 +32,27 @@
             <input type="email" placeholder="please enter your email address" />
             <label for="message">Your message</label>
             <input type="text" placeholder="please enter your message" />
-            <textarea name="descripttion" id="" cols="30" rows="10">
-Your message goes here</textarea
-            >
-            <input type="submit" class="btn green lighten-1 white-text" />
+            <input
+              type="text"
+              placeholder="Please discribe your problem in details"
+            />
+            <input
+              cf-label="Coding"
+              type="radio"
+              cf-image="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+              tabindex="1"
+              value="1"
+              name="logo"
+            />
+
+            <input
+              cf-label="Design"
+              type="radio"
+              cf-image="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1007&q=80"
+              tabindex="2"
+              value="2"
+              name="coding"
+            />
           </form>
           <div id="cf-context"></div>
         </div>
