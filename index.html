@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Building conversational Forms with HTML, CSS and JavaScript</title>
+    <script
+      type="text/javascript"
+      src="conversational-form.js"
+      crossorigin
+    ></script>
+    <link rel="stylesheet" href="materialize/css/materialize.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="s12">
+          <h2>I will turn this form into a conversational form</h2>
+          <form action="" cf-form id="my-form-element">
+            <label for="name">Your name</label>
+            <input type="text" placeholder="please enter your name" />
+            <label for="phone">Your phone number</label>
+            <input type="phone" placeholder="please enter your phone" /><br />
+            <label for="email">Your Email address</label>
+            <input type="email" placeholder="please enter your email address" />
+            <label for="message">Your message</label>
+            <input type="text" placeholder="please enter your message" />
+            <textarea name="descripttion" id="" cols="30" rows="10">
+Your message goes here</textarea
+            >
+            <input type="submit" class="btn green lighten-1 white-text" />
+          </form>
+          <div id="cf-context"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.onload = function() {
+        var conversationalForm = window.cf.ConversationalForm.startTheConversation(
+          {
+            formEl: document.getElementById('form'),
+            context: document.getElementById('cf-context'),
+            submitCallback: function() {
+              alert('Submit: check dev tools console for more');
+              // be aware that this prevents default form submit.
+              var formData = conversationalForm.getFormData();
+              var formDataSerialized = conversationalForm.getFormData(true);
+              console.log('Formdata:', formData);
+              console.log('Formdata, serialized:', formDataSerialized);
+              conversationalForm.addRobotChatResponse(
+                'Check the dev console for FormatData output.'
+              );
+            }
+          }
+        );
+      };
+    </script>
+  </body>
+</html>
