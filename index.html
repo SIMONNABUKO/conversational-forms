@@ -10,11 +10,11 @@
       src="https://cdn.jsdelivr.net/gh/space10-community/conversational-form@1.0.1/dist/conversational-form.min.js"
       crossorigin
     ></script>
-    <script
+    <!-- <script
       type="text/javascript"
       src="conversational-form.js"
       crossorigin
-    ></script>
+    ></script> -->
     <link rel="stylesheet" href="materialize/css/materialize.min.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -22,7 +22,6 @@
     <div class="container">
       <div class="row">
         <div class="s12">
-          <h2>I will turn this form into a conversational form</h2>
           <datalist id="browsers">
             <option value="Internet Explorer"> </option>
             <option value="Firefox"> </option>
@@ -33,15 +32,32 @@
 
           <form action="" cf-form id="form">
             <label for="name">Your name</label>
-            <input type="text" placeholder="please enter your name" />
-            <label for="phone">Your phone number</label>
-            <input type="phone" placeholder="please enter your phone" /><br />
-            <label for="email">Your Email address</label>
-            <input type="email" placeholder="please enter your email address" />
-            <label for="message">Your message</label>
-            <input type="text" placeholder="please enter your message" />
             <input
               type="text"
+              name="name"
+              placeholder="please enter your name"
+            />
+            <label for="phone">Your phone number</label>
+            <input
+              type="phone"
+              name="phone"
+              placeholder="please enter your phone"
+            /><br />
+            <label for="email">Your Email address</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="please enter your email address"
+            />
+            <label for="message">Your message</label>
+            <input
+              type="text"
+              name="message"
+              placeholder="please enter your message"
+            />
+            <input
+              type="text"
+              name="detailed_message"
               placeholder="Please discribe your problem in details"
             />
             <input
